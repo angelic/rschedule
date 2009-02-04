@@ -1,0 +1,6 @@
+[submodule "vendor\\plugins\\acts_as_calendar"]
+	path = vendor\\plugins\\acts_as_calendar
+	url = git@github.com:angelic/acts_as_calendar.git
+[submodule "vendor\\plugins\\calendar_helper"]
+	path = vendor\\plugins\\calendar_helper
+	url = git@github.com:angelic/calendar_helper.git
