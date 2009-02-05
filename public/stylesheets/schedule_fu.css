@@ -1,0 +1,43 @@
+table#sf-main {
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: small;
+  font-size-adjust: none;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: normal;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.sf-section {
+  vertical-align: top;
+}
+
+#sf-section1 {
+  width: 12em;
+}
+
+#sf-section2 {
+  width: auto;
+}
+
+#sf-nav table {
+  vertical-align: bottom;
+  width: 100%;
+}
+
+#sf-week-days table {
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.sf-week-day {
+  margin-left: 4px;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+#sf-week-hours table {
+  
+}

@@ -1,0 +1,11 @@
+<table cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <% @dates.each do |date| %>
+        <td class="sf-week-day">
+          <%= date.value.strftime("%a %m/%d") %>
+        </th>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
