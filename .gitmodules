@@ -1,6 +1,9 @@
-[submodule "vendor\\plugins\\acts_as_calendar"]
-	path = vendor\\plugins\\acts_as_calendar
-	url = git@github.com:angelic/acts_as_calendar.git
-[submodule "vendor\\plugins\\calendar_helper"]
-	path = vendor\\plugins\\calendar_helper
-	url = git@github.com:angelic/calendar_helper.git
+[submodule "vendor\\plugins\\schedule_fu"]
+	path = vendor\\plugins\\schedule_fu
+	url = git@github.com:angelic/schedule_fu.git
+[submodule "vendor\\plugins\\rspec"]
+	path = vendor\\plugins\\rspec
+	url = git://github.com/dchelimsky/rspec.git
+[submodule "vendor\\plugins\\rspec-rails"]
+	path = vendor\\plugins\\rspec-rails
+	url = git://github.com/dchelimsky/rspec-rails.git
