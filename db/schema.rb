@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090204171400) do
+ActiveRecord::Schema.define(:version => 20090205195005) do
 
   create_table "calendar_dates", :force => true do |t|
     t.date    "value",                                       :null => false
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(:version => 20090204171400) do
     t.integer "calendar_id", :null => false
     t.date    "start_date"
     t.date    "end_date"
+    t.time    "start_time"
+    t.time    "end_time"
+    t.text    "descr"
   end
 
   create_table "calendar_occurrences", :id => false, :force => true do |t|

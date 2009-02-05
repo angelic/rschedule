@@ -4,7 +4,17 @@
       <% @dates.each do |date| %>
         <td class="sf-week-day">
           <%= date.value.strftime("%a %m/%d") %>
-        </th>
+        </td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @dates.each do |date| %>
+        <td>
+          <% date.events.without_time_set.each do |event| %>
+            <%= event.descr %>
+            <br/>
+          <% end %>
+        </td>
       <% end %>
     </tr>
   </tbody>
