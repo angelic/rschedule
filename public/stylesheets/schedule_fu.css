@@ -27,7 +27,7 @@ table#sf-main {
   width: 100%;
 }
 
-#sf-week-days table {
+.sf-week-days {
   font-size: 11px;
   line-height: 14px;
 }
