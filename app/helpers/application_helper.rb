@@ -1,5 +1,8 @@
 module ApplicationHelper
+  include ScheduleFu::CalendarHelper
+  include ScheduleFu::ScheduleFuHelper
+
   def chronic_date_string(*args)
-    Chronic.parse(*args).to_date.to_s
+    chronic_date(*args).to_s
   end
 end

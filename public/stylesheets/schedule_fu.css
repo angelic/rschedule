@@ -15,7 +15,7 @@ table#sf-main {
 }
 
 #sf-section1 {
-  width: 12em;
+  width: 15em;
 }
 
 #sf-section2 {
@@ -24,7 +24,10 @@ table#sf-main {
 
 #sf-nav table {
   vertical-align: bottom;
-  width: 100%;
+}
+
+#sf-nav td {
+  padding-left: 7px;
 }
 
 .sf-week-days {

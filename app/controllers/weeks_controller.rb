@@ -1,5 +1,5 @@
 class WeeksController < ApplicationController
-  include ScheduleFuHelper
+  include ScheduleFu::ScheduleFuHelper
   
   before_filter :set_calendar
   
