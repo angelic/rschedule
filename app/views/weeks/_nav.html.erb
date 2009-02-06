@@ -3,10 +3,10 @@
     <tbody>
       <tr>
         <td>
-          <%= link_to "<", :controller => 'calendar', :action => 'week', :id => 'last' %>
+          <%= link_to "<", week_url('next') %>
         </td>
         <td>
-          <%= link_to ">", :controller => 'calendar', :action => 'week', :id => 'next' %>
+          <%= link_to ">", week_url('last') %>
         </td>
         <td>
           <%= button_to 'Today' %>
