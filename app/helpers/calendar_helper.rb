@@ -21,4 +21,20 @@ module CalendarHelper
   def time_format(time)
     time.strftime("%I:%M%p").downcase
   end
+  
+  def event_day_descr(event)
+    event_descr_to_size(event, 10) if event
+  end
+  
+  def event_hour_descr(event)
+    event_descr_to_size(event, 50) if event
+  end
+  
+  def event_descr_to_size(event, size)
+    "#{recurring_symbol(event)}#{event.descr}"[0,size]
+  end
+  
+  def recurring_symbol(event)
+    'R ' if event.recurrences.size > 0 
+  end
 end
