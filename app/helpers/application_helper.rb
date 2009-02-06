@@ -1,3 +1,5 @@
-# Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+  def chronic_date_string(*args)
+    Chronic.parse(*args).to_date.to_s
+  end
 end
