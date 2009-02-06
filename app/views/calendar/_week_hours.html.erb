@@ -1,0 +1,16 @@
+<% @dates.each do |date| %>
+  <td>
+    <% date.events.with_time_set.each do |event| %>
+      <div>
+        <dl>
+          <dd>
+            <%= event_time(event.start_time, event.end_time) %>
+          </dd>
+          <dt>
+            <%= event.descr %>
+          </dt>
+        </dl>
+      </div>
+    <% end %>
+  </td>
+<% end %>

@@ -38,6 +38,6 @@ table#sf-main {
   white-space: nowrap;
 }
 
-#sf-week-hours table {
-  
+.sf-hour {
+  height: 40px;
 }

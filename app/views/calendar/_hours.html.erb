@@ -1,0 +1,13 @@
+<td>
+  <% time_range = (1..11).to_a.insert(0, 12) 
+     time_range.each do |i| %>
+    <div class="sf-hour">
+      <%= i %>am
+    </div>
+  <% end %>
+  <% time_range.each do |i| %>
+    <div class="sf-hour">
+      <%= i %>pm
+    </div>
+  <% end %>
+</td>

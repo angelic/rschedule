@@ -13,4 +13,12 @@ module CalendarHelper
     end
     "#{from_display} - #{to_display}"
   end
+  
+  def event_time(start_time, end_time)
+    "#{time_format(start_time)} - #{time_format(end_time)}"
+  end
+  
+  def time_format(time)
+    time.strftime("%I:%M%p").downcase
+  end
 end
