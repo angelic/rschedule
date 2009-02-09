@@ -48,6 +48,11 @@ module WeeksHelper
         :url => next_or_last_week_url(:future)
   end
   
+  def today_link
+    link_to_remote "Today", :update => "sf-main-calendar", 
+        :url => change_week_week_url(Time.now.to_date.to_s)
+  end
+  
   def previous_month_link
     content_tag(:span, :id => 'sf-previous-month-link') do
       link_to_remote "<", :update => "sf-small-calendar", 
