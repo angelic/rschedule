@@ -22,6 +22,7 @@ class WeeksController < ApplicationController
     @dates = @calendar.dates.find_by_dates(range)
     max = @calendar.max_events_per_day_without_time_set(range)
     @without_time_range = 0..(max - 1)
+    @selected_date = parse_date_or_now(params[:id]) 
   end
   
   def set_calendar

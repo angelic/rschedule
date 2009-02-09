@@ -15,7 +15,7 @@ table#sf-main {
 }
 
 #sf-section1 {
-  width: 15em;
+  width: 12em;
 }
 
 #sf-section2 {
@@ -43,4 +43,9 @@ table#sf-main {
 
 .sf-hour {
   height: 40px;
+}
+
+.day, .otherMonth {
+  padding: 2px;
+  text-align: right;
 }
