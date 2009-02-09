@@ -46,10 +46,28 @@ module WeeksHelper
     link_to ">", next_or_last_week_url(:future)
   end
   
+  def previous_month_link
+    content_tag(:span, :id => 'sf-previous-month-link') do
+      link_to_remote "<", :update => "sf-small-calendar", 
+        :url => next_or_last_month_url('last month')
+    end
+  end
+  
+  def next_month_link
+    content_tag(:span, :id => 'sf-next-month-link') do
+      link_to_remote ">", :update => "sf-small-calendar", 
+          :url => next_or_last_month_url('next month')
+    end
+  end
+  
   protected
   def next_or_last_week_url(context)
-    now = Date.parse(session[:sf_week_sunday])
-    sunday = Chronic.parse('sunday', :now => now, :context => context)
+    sunday = Chronic.parse('sunday', :now => @selected_date, :context => context)
     week_url(sunday.to_date.to_s)
+  end
+  
+  def next_or_last_month_url(text)
+    day = Chronic.parse(text, :now => @selected_date)
+    change_month_week_url(day)
   end
 end

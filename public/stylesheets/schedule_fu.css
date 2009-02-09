@@ -22,6 +22,14 @@ table#sf-main {
   width: auto;
 }
 
+#sf-next-month-link {
+  text-align: right;
+}
+
+#sf-last-month-link {
+  text-align: left;
+}
+
 #sf-nav table {
   vertical-align: bottom;
 }

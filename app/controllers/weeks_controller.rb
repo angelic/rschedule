@@ -16,6 +16,11 @@ class WeeksController < ApplicationController
     set_dates sunday..saturday
   end
   
+  def change_month
+    @selected_date = parse_date_or_now(params[:id]) 
+    render :partial => 'small_calendar'
+  end
+  
   protected
   
   def set_dates(range)

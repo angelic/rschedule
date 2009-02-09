@@ -1,5 +1,8 @@
 <%= calendar(:year => @selected_date.year, :month => @selected_date.mon,
-        :abbrev => 0..0) do |d|
+        :abbrev => 0..0, :previous_month_text => previous_month_link,
+        :next_month_text => next_month_link, 
+        :month_name_array => Date::ABBR_MONTHNAMES, 
+        :display_year => @selected_date.strftime("%y")) do |d|
       [link_to d.mday, week_url(d.to_date.to_s), {:class => "normalDay"}]
     end
 %>
