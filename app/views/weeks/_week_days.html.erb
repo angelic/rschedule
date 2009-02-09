@@ -12,7 +12,7 @@
     <% @dates.each do |date| %>
       <td>
         <% event = date.events.without_time_set[i] %>
-          <%= event_day_descr(event) %>
+          <%= event_day_desc(event) %>
       </td>
     <% end %>
   </tr>

@@ -17,6 +17,9 @@ class AddActsAsCalendarTables < ActiveRecord::Migration
       t.column :calendar_id, :integer, :null=>false
       t.column :start_date, :date
       t.column :end_date, :date
+      t.column :start_time, :time
+      t.column :end_time, :time
+      t.column :desc, :text
     end
  
     create_table :calendar_occurrences, :id => false do |t|
