@@ -1,3 +1,3 @@
 RSchedule
 
-This application is built around ScheduleFu to be used as a schedule book application.
+This application is built around ScheduleFu to be used as a schedule book application. Currently navigation works, and adding events has to be done by console.
