@@ -39,11 +39,13 @@ module WeeksHelper
   end
   
   def previous_week_link
-    link_to "<", next_or_last_week_url(:past)
+    link_to_remote "<", :update => "sf-main-calendar", 
+        :url => next_or_last_week_url(:past)
   end
   
   def next_week_link
-    link_to ">", next_or_last_week_url(:future)
+    link_to_remote ">", :update => "sf-main-calendar",
+        :url => next_or_last_week_url(:future)
   end
   
   def previous_month_link
@@ -63,7 +65,7 @@ module WeeksHelper
   protected
   def next_or_last_week_url(context)
     sunday = Chronic.parse('sunday', :now => @selected_date, :context => context)
-    week_url(sunday.to_date.to_s)
+    change_week_week_url(sunday.to_date.to_s)
   end
   
   def next_or_last_month_url(text)

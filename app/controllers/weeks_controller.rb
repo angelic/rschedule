@@ -21,6 +21,11 @@ class WeeksController < ApplicationController
     render :partial => 'small_calendar'
   end
   
+  def change_week
+    show
+    render :partial => 'calendar'
+  end
+  
   protected
   
   def set_dates(range)
