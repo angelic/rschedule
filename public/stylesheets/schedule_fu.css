@@ -57,3 +57,16 @@ table#sf-main {
   padding: 2px;
   text-align: right;
 }
+
+#sf-add-event {
+  position: absolute; 
+  background: white none repeat scroll 0 0;
+  border: thin black solid;
+  padding: 1em;
+  margin-top: 0.4em;
+  margin-left: -12em;
+}
+
+.sf-close {
+  text-align: right;
+}

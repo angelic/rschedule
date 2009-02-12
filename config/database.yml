@@ -1,5 +1,5 @@
 development: &development
-  adapter: mysql
+  adapter: jdbcmysql
   database: rschedule_development
   username: root
 

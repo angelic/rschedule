@@ -1,0 +1,5 @@
+if @calendar_event.errors.size > 0
+  page.replace_html "flash-new-error", error_messages_for('calendar_event')
+else
+  page.hide "sf-add-event"
+end

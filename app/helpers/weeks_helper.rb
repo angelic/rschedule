@@ -67,6 +67,11 @@ module WeeksHelper
     end
   end
   
+  def add_event_link
+    link_to_remote("Add Event", :update => "sf-add-event", 
+        :url => new_event_url, :complete => "Element.show($('sf-add-event'))")
+  end
+  
   protected
   def next_or_last_week_url(context)
     sunday = Chronic.parse('sunday', :now => @selected_date, :context => context)

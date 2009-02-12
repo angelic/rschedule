@@ -1,0 +1,58 @@
+<%= close_link "sf-add-event"%>
+<%= flash_div 'new-error' %>
+<% remote_form_for(:calendar_event, :url => events_url) do |f| %>
+  <%= f.hidden_field :calendar_id, :value => @calendar.id %>
+  <table>
+    <tr>
+      <td>
+        Event:
+      </td>
+      <td>
+        <%= f.text_field :desc, :size => 50 %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        From:
+      </td>
+      <td>
+        <%= f.text_field :start_date %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <%= f.text_field :start_time %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        To:
+      </td>
+      <td>
+        <%= f.text_field :end_time %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <%= f.text_field :end_date %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Description:
+      </td>
+      <td>
+        <%= f.text_area :long_desc, :cols => 50, :rows => 15 %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <%= submit_tag %>
+      </td>
+    </tr>
+  </table>
+<% end %>
