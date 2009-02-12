@@ -1,9 +1,9 @@
-[submodule "vendor\\plugins\\schedule_fu"]
-	path = vendor\\plugins\\schedule_fu
+[submodule "vendor/plugins/schedule_fu"]
+	path = vendor/plugins/schedule_fu
 	url = git@github.com:angelic/schedule_fu.git
-[submodule "vendor\\plugins\\rspec"]
-	path = vendor\\plugins\\rspec
+[submodule "vendor/plugins/rspec"]
+	path = vendor/plugins/rspec
 	url = git://github.com/dchelimsky/rspec.git
-[submodule "vendor\\plugins\\rspec-rails"]
-	path = vendor\\plugins\\rspec-rails
+[submodule "vendor/plugins/rspec-rails"]
+	path = vendor/plugins/rspec-rails
 	url = git://github.com/dchelimsky/rspec-rails.git
