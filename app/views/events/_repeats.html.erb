@@ -1,3 +1,1 @@
-<%= options = options_for_select ["Does not repeat", "Daily", "Every weekday", 
-        "Weekly", "Monthly", "Yearly"]
-    select_tag :repeats, options %>
+<%= f.select :recurrence_type, recurrence_types %>

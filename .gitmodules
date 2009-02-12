@@ -7,3 +7,6 @@
 [submodule "vendor/plugins/rspec-rails"]
 	path = vendor/plugins/rspec-rails
 	url = git://github.com/dchelimsky/rspec-rails.git
+[submodule "vendor/plugins/calendar_date_select"]
+	path = vendor/plugins/calendar_date_select
+	url = git://github.com/timcharper/calendar_date_select.git
