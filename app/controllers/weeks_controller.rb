@@ -10,7 +10,7 @@ class WeeksController < ApplicationController
     params[:id] ||= session[:sf_week_sunday]
     sunday = previous_sunday(params[:id])
     session[:sf_week_sunday] = sunday.to_s
-    saturday = chronic_date('saturday', :now => sunday)
+    saturday = 6.days.since sunday
     set_dates sunday..saturday
   end
   

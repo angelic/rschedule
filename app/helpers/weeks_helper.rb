@@ -39,13 +39,15 @@ module WeeksHelper
   end
   
   def previous_week_link
+    day = 7.days.ago(@selected_date.wday.ago(@selected_date))
     link_to_remote "<", :update => "sf-main-calendar", 
-        :url => next_or_last_week_url(:past)
+        :url => change_week_week_url(day)
   end
   
   def next_week_link
+    day = 7.days.since(@selected_date.wday.ago(@selected_date))
     link_to_remote ">", :update => "sf-main-calendar",
-        :url => next_or_last_week_url(:future)
+        :url => change_week_week_url(day)
   end
   
   def today_link
@@ -54,32 +56,23 @@ module WeeksHelper
   end
   
   def previous_month_link
+    day = 1.day.ago @selected_date.beginning_of_month
     content_tag(:span, :id => 'sf-previous-month-link') do
       link_to_remote "<", :update => "sf-small-calendar", 
-        :url => next_or_last_month_url('last month')
+        :url => change_month_week_url(day)
     end
   end
   
   def next_month_link
+    day = 1.day.since @selected_date.end_of_month
     content_tag(:span, :id => 'sf-next-month-link') do
       link_to_remote ">", :update => "sf-small-calendar", 
-          :url => next_or_last_month_url('next month')
+          :url => change_month_week_url(day)
     end
   end
   
   def add_event_link
     link_to_remote("Add Event", :update => "sf-add-event", 
         :url => new_event_url, :complete => "Element.show($('sf-add-event'))")
-  end
-  
-  protected
-  def next_or_last_week_url(context)
-    sunday = Chronic.parse('sunday', :now => @selected_date, :context => context)
-    change_week_week_url(sunday.to_date.to_s)
-  end
-  
-  def next_or_last_month_url(text)
-    day = Chronic.parse(text, :now => @selected_date)
-    change_month_week_url(day)
   end
 end
