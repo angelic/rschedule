@@ -1,10 +1,5 @@
 module EventsHelper
-  def recurrence_types
-    [["Does not repeat", :norepeat], 
-        ["Weekdays (M-F)", :weekdays], 
-        ["Daily", :daily],
-        ["Weekly", :weekly], 
-        ["Monthly", :monthly],
-        ["Yearly", :yearly]]
+  def event_types
+    CalendarEventType.all.collect {|t| [t.desc, t.name]}
   end
 end

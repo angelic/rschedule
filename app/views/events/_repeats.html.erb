@@ -1,6 +1,7 @@
-<%= f.select :recurrence_type, recurrence_types, {}, {:id => "sf-recurrence-type",
+<%= f.select :event_type, event_types, {}, {:id => "sf-recurrence-type",
         :onchange => "display_recurrence_options()"} %>
 
 <%= render :partial => 'repeats_weekly', :locals => {:f => f} %>
 <%= render :partial => 'repeats_monthly', :locals => {:f => f} %>
 <%= render :partial => 'repeats_yearly', :locals => {:f => f} %>
+<%= render :partial => 'repeat_by', :locals => {:f => f} %>
