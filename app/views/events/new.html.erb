@@ -5,7 +5,7 @@
   <table>
     <tr>
       <td>
-        Event:
+        <%= f.label :desc, "Event:" %>
       </td>
       <td>
         <%= f.text_field :desc, :size => 50 %>
@@ -13,7 +13,7 @@
     </tr>
     <tr>
       <td>
-        From date:
+        <%= f.label :start_date, "From date:" %>
       </td>
       <td>
         <%= f.calendar_date_select :start_date %>
@@ -21,7 +21,7 @@
     </tr>
     <tr>
       <td>
-        From time:
+        <%= f.label :start_time, "From time:" %>
       </td>
       <td>
         <%= f.text_field :start_time %>
@@ -29,7 +29,7 @@
     </tr>
     <tr>
       <td>
-        To time:
+        <%= f.label :end_time, "To time:" %>
       </td>
       <td>
         <%= f.text_field :end_time %>
@@ -37,7 +37,7 @@
     </tr>
     <tr>
       <td>
-        To date:
+        <%= f.label :end_date, "To date:" %>
       </td>
       <td>
         <%= f.calendar_date_select :end_date %>
@@ -52,7 +52,7 @@
       </td>
     <tr>
       <td>
-        Description:
+        <%= f.label :long_desc, "Description:" %>
       </td>
       <td>
         <%= f.text_area :long_desc, :cols => 50, :rows => 15 %>
