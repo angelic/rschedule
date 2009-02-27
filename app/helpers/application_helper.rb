@@ -9,10 +9,6 @@ module ApplicationHelper
     divs.join
   end
   
-  def chronic_date_string(*args)
-    chronic_date(*args).to_s
-  end
-  
   def close_link(close_id)
     content_tag(:div, :class => "sf-close") do
       link_to_function "X", "Element.hide($('#{close_id}'))"
