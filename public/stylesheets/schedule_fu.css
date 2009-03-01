@@ -70,3 +70,8 @@ table#sf-main {
 .sf-close {
   text-align: right;
 }
+
+.sf-week-event, .sf-week-event-hours {
+  border: thin solid black;
+  padding: 2px;
+}

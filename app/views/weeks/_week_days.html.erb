@@ -10,9 +10,12 @@
   <tr class="sf-week-days">
     <td></td>
     <% @dates.each do |date| %>
-      <td>
-        <% event = date.events.without_time_set[i] %>
-          <%= event_day_desc(event) %>
+      <% if event = date.events.without_time_set[i] %>
+        <td class="sf-week-event">
+      <% else %>
+        <td>
+      <% end %>
+        <%= event_day_desc(event) %>
       </td>
     <% end %>
   </tr>
