@@ -23,7 +23,7 @@ module WeeksHelper
   end
   
   def event_day_desc(event)
-    event_desc_to_size(event, 10) if event
+    event_desc_to_size(event, 25) if event
   end
   
   def event_hour_desc(event)
@@ -40,19 +40,16 @@ module WeeksHelper
   
   def previous_week_link
     day = 7.days.ago(@selected_date.wday.ago(@selected_date))
-    link_to_remote "<", :update => "sf-main-calendar", 
-        :url => change_week_week_url(day)
+    link_to_remote "<", :url => change_week_week_url(day)
   end
   
   def next_week_link
     day = 7.days.since(@selected_date.wday.ago(@selected_date))
-    link_to_remote ">", :update => "sf-main-calendar",
-        :url => change_week_week_url(day)
+    link_to_remote ">", :url => change_week_week_url(day)
   end
   
   def today_link
-    link_to_remote "Today", :update => "sf-main-calendar", 
-        :url => change_week_week_url(Time.now.to_date.to_s)
+    link_to_remote "Today", :url => change_week_week_url(Time.now.to_date.to_s)
   end
   
   def previous_month_link

@@ -21,7 +21,10 @@ class WeeksController < ApplicationController
   
   def change_week
     show
-    render :partial => 'calendar'
+    render :update do |page|
+      page.replace_html 'sf-main-calendar', :partial => 'calendar'
+      page.replace_html 'sf-small-calendar', :partial => 'small_calendar'
+    end
   end
   
   protected
