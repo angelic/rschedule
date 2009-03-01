@@ -1,0 +1,9 @@
+<%= close_link "sf-add-event"%>
+<%= flash_div 'new-error' %>
+<% remote_form_for(:calendar_event, :url => event_url(@calendar_event), 
+       :method => :put) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+<% end %> 
+
+<%= link_to_remote "Delete", :url => event_url(@calendar_event), 
+        :confirm => 'Are you sure?', :method => :delete%>

@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
   
+  protected
   def set_calendar
     @calendar = Calendar.first
   end

@@ -1,0 +1,2 @@
+page.replace_html 'sf-main-calendar', :partial => 'calendar'
+page.replace_html 'sf-small-calendar', :partial => 'small_calendar'

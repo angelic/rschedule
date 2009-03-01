@@ -11,12 +11,12 @@
     <td></td>
     <% @dates.each do |date| %>
       <% if event = date.events.without_time_set[i] %>
-        <td class="sf-week-event">
+        <td class="sf-week-event" onclick="<%=edit_event_js(event)%>">
+          <%= event_day_desc(event) %>
+        </td>
       <% else %>
-        <td>
+        <td></td>
       <% end %>
-        <%= event_day_desc(event) %>
-      </td>
     <% end %>
   </tr>
 <% end %>

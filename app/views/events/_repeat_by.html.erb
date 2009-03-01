@@ -1,4 +1,4 @@
-<div id="sf-recurrence-repeat-by" style="display:none;">
+<div id="sf-recurrence-repeat-by" style="<%= recurrence_style('monthly', 'yearly') %>">
   <%= f.radio_button("repeat_by", "weekday")%> Day of the week
   <%= f.radio_button("repeat_by", "monthday")%> Day of the month
 </div>

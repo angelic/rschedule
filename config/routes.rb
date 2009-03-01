@@ -30,7 +30,7 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
   map.resources :calendar, :only => :show
-  map.resources :events, :except => [:index, :list]
+  map.resources :events, :except => [:index, :list], :member => {:edit => :post}
   map.resources :weeks, :only => [:index, :show], 
       :member => {:change_month => :post, :change_week => :post}
   

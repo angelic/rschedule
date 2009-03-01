@@ -3,10 +3,10 @@
     <% date.events.with_time_set.each do |event| %>
       <div>
         <dl>
-          <dd class="sf-week-event-hours">
+          <dd class="sf-week-event-hours" onclick="<%=edit_event_js(event)%>">
             <%= event_time(event.start_time, event.end_time) %>
           </dd>
-          <dt class="sf-week-event">
+          <dt class="sf-week-event" onclick="<%=edit_event_js(event)%>">
             <%= event_hour_desc(event) %>
           </dt>
         </dl>

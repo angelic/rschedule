@@ -72,4 +72,10 @@ module WeeksHelper
     link_to_remote("Add Event", :update => "sf-add-event", 
         :url => new_event_url, :complete => "Element.show($('sf-add-event'))")
   end
+  
+  def edit_event_js(event)
+    return if event.nil?
+    remote_function(:update => "sf-add-event", :url => edit_event_url(event), 
+        :complete => "Element.show($('sf-add-event'))")
+  end
 end
