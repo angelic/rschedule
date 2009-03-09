@@ -2,7 +2,7 @@
   <%= f.label "repeat_by", "Repeat on:" %><br/>
   <table>
     <tr>
-      <%= (0..6).collect {|d| content_tag(:td, f.check_box("repeat_#{d}", {}, true, false)) }  %>
+      <%= (0..6).collect {|d| content_tag(:td, f.check_box("repeat_#{d}")) }  %>
     </tr>
     <tr>
       <%= %w{S M T W T F S}.collect {|d| "<td>#{d}</td>"} %>
