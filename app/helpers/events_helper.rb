@@ -4,7 +4,7 @@ module EventsHelper
   end
   
   def recurrence_style(*event_types)
-    display = event_types.any? {|t| @calendar_event.is_event_type?(t)}
+    display = event_types.any? {|t| @calendar_event.event_type_matches?(t)}
     style = display ? "block" : "none"
     "display: #{style};"
   end
