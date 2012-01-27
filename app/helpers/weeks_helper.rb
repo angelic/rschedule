@@ -1,4 +1,15 @@
 module WeeksHelper
+  def small_calendar
+    calendar(:year => @selected_date.year, :month => @selected_date.mon,
+        :abbrev => 0..0, :previous_month_text => previous_month_link,
+        :next_month_text => next_month_link, 
+        :month_name_array => Date::ABBR_MONTHNAMES, 
+        :display_year => @selected_date.strftime("%y")) do |d|
+      [link_to(d.mday, change_week_week_url(d.to_date.to_s), 
+          :remote => true, :class => "normalDay")]
+    end
+  end
+
   def date_display
     return unless @dates
     from = @dates.first.value
@@ -40,42 +51,42 @@ module WeeksHelper
   
   def previous_week_link
     day = 7.days.ago(@selected_date.wday.ago(@selected_date))
-    link_to_remote "<", :url => change_week_week_url(day)
+    link_to("<", change_week_week_url(day), :remote => true)
   end
   
   def next_week_link
     day = 7.days.since(@selected_date.wday.ago(@selected_date))
-    link_to_remote ">", :url => change_week_week_url(day)
+    link_to(">", change_week_week_url(day), :remote => true)
   end
   
   def today_link
-    link_to_remote "Today", :url => change_week_week_url(Time.now.to_date.to_s)
+    link_to("Today", change_week_week_url(Time.now.to_date.to_s), :remote => true)
   end
-  
+ 
+  def hidden_nav_link
+    link_to("", change_week_week_url(@selected_date), :remote => true, :id => 'sf-selected-date-nav-link')
+  end
+
   def previous_month_link
     day = 1.day.ago @selected_date.beginning_of_month
     content_tag(:span, :id => 'sf-previous-month-link') do
-      link_to_remote "<", :update => "sf-small-calendar", 
-        :url => change_month_week_url(day)
+      link_to "<", change_month_week_url(day), :remote => true
     end
   end
   
   def next_month_link
     day = 1.day.since @selected_date.end_of_month
     content_tag(:span, :id => 'sf-next-month-link') do
-      link_to_remote ">", :update => "sf-small-calendar", 
-          :url => change_month_week_url(day)
+      link_to ">", change_month_week_url(day), :remote => true
     end
   end
   
   def add_event_link
-    link_to_remote("Add Event", :update => "sf-add-event", 
-        :url => new_event_url, :complete => "Element.show($('sf-add-event'))")
+    link_to("Add Event", new_event_url, :remote => true, :id => "sf-add-event-link")
   end
   
-  def edit_event_js(event)
+  def edit_event_link(event)
     return if event.nil?
-    remote_function(:update => "sf-add-event", :url => edit_event_url(event), 
-        :complete => "Element.show($('sf-add-event'))")
+    link_to "", edit_event_url(event), :class => "sf-hidden-edit-event-link", :remote => true
   end
 end

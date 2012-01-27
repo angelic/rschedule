@@ -1,0 +1,4 @@
+<%= flash_div 'new-error' %>
+<%= form_for(:calendar_event, :url => events_url, :remote => true) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+<% end %>

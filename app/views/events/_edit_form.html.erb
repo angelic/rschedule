@@ -1,0 +1,8 @@
+<%= flash_div 'new-error' %>
+<%= form_for(:calendar_event, :url => event_url(@calendar_event), 
+       :method => :put, :remote => true) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+<% end %> 
+
+<%= link_to "Delete", event_url(@calendar_event), :remote => true, 
+        :confirm => 'Are you sure?', :method => :delete %>

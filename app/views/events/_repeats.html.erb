@@ -1,5 +1,4 @@
-<%= f.select :calendar_event_type_id, event_types, {}, 
-        {:onchange => "display_recurrence_options()"} %>
+<%= f.select :calendar_event_type_id, event_types, {}, {:id => 'sf-event-recurrence-type'} %>
 
 <%= render :partial => 'repeats_weekly', :locals => {:f => f} %>
 <%= render :partial => 'repeats_monthly', :locals => {:f => f} %>

@@ -16,15 +16,10 @@ class WeeksController < ApplicationController
   
   def change_month
     @selected_date = parse_date_or_now(params[:id]) 
-    render :partial => 'small_calendar'
   end
   
   def change_week
     show
-    render :update do |page|
-      page.replace_html 'sf-main-calendar', :partial => 'calendar'
-      page.replace_html 'sf-small-calendar', :partial => 'small_calendar'
-    end
   end
   
   protected

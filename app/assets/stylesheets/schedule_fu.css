@@ -1,0 +1,81 @@
+table#sf-main {
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: small;
+  font-size-adjust: none;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: normal;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.sf-section {
+  vertical-align: top;
+}
+
+#sf-section1 {
+  width: 12em;
+}
+
+#sf-section2 {
+  width: auto;
+}
+
+#sf-next-month-link {
+  text-align: right;
+}
+
+#sf-last-month-link {
+  text-align: left;
+}
+
+#sf-nav table {
+  vertical-align: bottom;
+}
+
+#sf-nav td {
+  padding-left: 7px;
+}
+
+.sf-week-days {
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.sf-week-day {
+  margin-left: 4px;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+.sf-hour {
+  height: 40px;
+}
+
+.day, .otherMonth {
+  padding: 2px;
+  text-align: right;
+}
+
+#sf-add-event {
+  position: absolute; 
+  background: white none repeat scroll 0 0;
+  border: thin black solid;
+  padding: 1em;
+  margin-top: 0.4em;
+  margin-left: -12em;
+}
+
+.sf-close {
+  text-align: right;
+}
+
+.sf-week-event, .sf-week-event-hours {
+  border: thin solid black;
+  padding: 2px;
+}
+
+.sf-hidden-edit-event-link, #sf-selected-date-nav-link {
+  display: none;
+}

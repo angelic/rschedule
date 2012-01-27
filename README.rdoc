@@ -1,0 +1,3 @@
+RSchedule
+
+This application is built around ScheduleFu to be used as a schedule book application. It is not fully functional and is more to show schedule_fu working.

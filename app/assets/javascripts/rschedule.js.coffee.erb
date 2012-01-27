@@ -1,0 +1,22 @@
+$ ->
+  @sf_general_binding = ->
+    $('.sf-close a').click -> 
+      $(this).parent().parent().hide()
+      false
+    $('.sf-open-edit-window').click -> $(this).parent().find('.sf-hidden-edit-event-link').first().click()
+  @sf_general_binding()
+
+  @sf_add_window = ->
+    $('#sf-event-recurrence-type').change ->
+      recurrence_types = ['#sf-recurrence-repeat-by', '#sf-recurrence-weekly', '#sf-recurrence-monthly', '#sf-recurrence-yearly']
+      for recurrence_type in recurrence_types
+        $(recurrence_type).hide()
+      switch $('#sf-event-recurrence-type').val()
+        when '<%= CalendarEventType.where(name: 'weekly').first.id %>'
+          $('#sf-recurrence-weekly').show()
+        when '<%= CalendarEventType.where(name: 'monthly').first.id %>'
+          $('#sf-recurrence-repeat-by').show()
+          $('#sf-recurrence-monthly').show()
+        when '<%= CalendarEventType.where(name: 'yearly').first.id %>'
+          $('#sf-recurrence-repeat-by').show()
+          $('sf-recurrence-yearly').show()

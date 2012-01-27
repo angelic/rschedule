@@ -2,10 +2,13 @@
   <%= f.label "repeat_by", "Repeat on:" %><br/>
   <table>
     <tr>
-      <%= (0..6).collect {|d| content_tag(:td, f.check_box("repeat_#{d}")) }  %>
+      <%= text = "".html_safe 
+          (0..6).each {|d| text << content_tag(:td, f.check_box("repeat_#{d}")) }  
+          text
+      %>
     </tr>
     <tr>
-      <%= %w{S M T W T F S}.collect {|d| "<td>#{d}</td>"} %>
+      <%= raw %w{S M T W T F S}.collect {|d| "<td>#{d}</td>"}.join %>
     </tr>
   </table>
 </div>

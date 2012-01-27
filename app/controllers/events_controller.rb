@@ -8,7 +8,7 @@ class EventsController < ApplicationController
     @calendar_event = CalendarEvent.new
     respond_to do |format|
       format.html
-      format.js { render :layout => false }
+      format.js
     end
   end
   
@@ -16,7 +16,7 @@ class EventsController < ApplicationController
     @calendar_event = CalendarEvent.find(params[:id])
     respond_to do |format|
       format.html
-      format.js { render :layout => false }
+      format.js
     end 
   end
   
@@ -35,15 +35,7 @@ class EventsController < ApplicationController
   def respond_to_change
     respond_to do |format|
       format.html { redirect_to(root_url) }
-      format.js do
-        render :update do |page|
-          if @calendar_event.errors.size > 0
-            page.replace_html "flash-new-error", error_messages_for('calendar_event')
-          else
-            page.hide "sf-add-event"
-          end
-        end
-      end
+      format.js { render :update }
     end
   end    
 end
