@@ -1,6 +1,0 @@
-[submodule "vendor/plugins/schedule_fu"]
-	path = vendor/plugins/schedule_fu
-	url = git@github.com:angelic/schedule_fu.git
-[submodule "vendor/plugins/calendar_date_select"]
-	path = vendor/plugins/calendar_date_select
-	url = git://github.com/timcharper/calendar_date_select.git
