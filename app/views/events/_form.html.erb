@@ -13,7 +13,8 @@
       <%= f.label :start_date, "From date:" %>
     </td>
     <td>
-      <%= f.date_select :start_date %>
+      <%#= f.date_select :start_date %>
+      <%= f.text_field :start_date, :class => "datepicker" %>
     </td>
   </tr>
   <tr>
@@ -21,7 +22,7 @@
       <%= f.label :start_time, "From time:" %>
     </td>
     <td>
-      <%= f.text_field :start_time %>
+      <%= f.text_field :start_time, :class => "timepicker" %>
     </td>
   </tr>
   <tr>
@@ -29,7 +30,7 @@
       <%= f.label :end_time, "To time:" %>
     </td>
     <td>
-      <%= f.text_field :end_time %>
+      <%= f.text_field :end_time, :class => "timepicker" %>
     </td>
   </tr>
   <tr>
@@ -37,7 +38,8 @@
       <%= f.label :end_date, "To date:" %>
     </td>
     <td>
-      <%= f.date_select :end_date %>
+      <%#= f.date_select :end_date %>
+      <%= f.text_field :end_date, :class => "datepicker" %>
     </td>
   </tr>
   <tr>
