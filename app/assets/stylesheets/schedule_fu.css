@@ -39,7 +39,6 @@ table#sf-main {
 }
 
 .sf-week-days {
-  font-size: 11px;
   line-height: 14px;
 }
 
@@ -47,6 +46,7 @@ table#sf-main {
   margin-left: 4px;
   padding: 2px 4px;
   white-space: nowrap;
+  width: 10em;
 }
 
 .sf-hour {
@@ -65,15 +65,22 @@ table#sf-main {
   padding: 1em;
   margin-top: 0.4em;
   margin-left: -12em;
+  z-index: 100;
 }
 
 .sf-close {
   text-align: right;
 }
 
-.sf-week-event, .sf-week-event-hours {
+.sf-week-event-column {
+  position: relative;
+}
+
+.sf-week-event {
   border: thin solid black;
-  padding: 2px;
+  padding: 4px;
+  background-color: #7BD148;
+  position: absolute;
 }
 
 .sf-hidden-edit-event-link, #sf-selected-date-nav-link {

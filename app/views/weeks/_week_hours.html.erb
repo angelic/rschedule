@@ -1,21 +1,23 @@
 <% @dates.each do |date| %>
-  <td>
-    <% date.events.with_time_set.each do |event| %>
+  <td class="sf-week-event-column">
+    <% date.events.with_time_set.order(:start_time).each do |event| %>
+      <% top = event.start_time.hour * 40 %>
+      <% bottom = (40 * 24) - (event.end_time.hour * 40)%>
       <div>
-        <dl>
-          <dd class="sf-week-event-hours">
-            <%= edit_event_link(event) %>
-            <div class="sf-open-edit-window">
+        <%= edit_event_link(event) %>
+        <div class="sf-week-event sf-open-edit-window" style="top: <%= top %>px; bottom: <%= bottom %>px;">
+          <div class="sf-week-event-hours">
+            <div>
               <%= event_time(event.start_time, event.end_time) %>
             </div>
-          </dd>
-          <dt class="sf-week-event">
+          </div>
+          <div class="sf-week-event-desc">
             <%= edit_event_link(event) %>
-            <div class="sf-open-edit-window">
+            <div>
               <%= event_hour_desc(event) %>
             </div>
-          </dt>
-        </dl>
+          </div>
+        </div>
       </div>
     <% end %>
   </td>
