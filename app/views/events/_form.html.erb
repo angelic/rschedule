@@ -14,8 +14,9 @@
       <%= f.label :start_date, "From date:" %>
     </td>
     <td>
-      <%#= f.date_select :start_date %>
-      <%= f.text_field :start_date, :class => "datepicker" %>
+      <%= f.hidden_field :start_date %>
+      <%= text_field_tag :show_start_date, @calendar_event.start_date,
+              :class => "datepicker" %>
     </td>
   </tr>
   <tr>
@@ -39,8 +40,9 @@
       <%= f.label :end_date, "To date:" %>
     </td>
     <td>
-      <%#= f.date_select :end_date %>
-      <%= f.text_field :end_date, :class => "datepicker" %>
+      <%= f.hidden_field :end_date %>
+      <%= text_field_tag :show_end_date, @calendar_event.end_date,
+              :class => "datepicker" %>
     </td>
   </tr>
   <tr>

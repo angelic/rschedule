@@ -23,3 +23,7 @@ $ ->
           $('sf-recurrence-yearly').show()
     $('.datepicker').datepicker()
     $('.timepicker').timepicker()
+
+  @set_alt_field = (display_field_id, alt_field_id) ->
+    $(display_field_id).datepicker('option', 'altField', alt_field_id)
+    $(display_field_id).datepicker('option', 'altFormat', 'yy-mm-dd')
