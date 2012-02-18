@@ -79,3 +79,7 @@ table#sf-main {
 .sf-hidden-edit-event-link, #sf-selected-date-nav-link {
   display: none;
 }
+
+.error, .new-error {
+  color: red;
+}
