@@ -32,9 +32,9 @@ module Rschedule
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    my_date_formats = { :default => '%m-%d-%Y' } 
-    Time::DATE_FORMATS.merge!(my_date_formats) 
-    Date::DATE_FORMATS.merge!(my_date_formats)
+    my_date_formats = 
+    Time::DATE_FORMATS.merge!({ :default => '%H:%M' }) 
+    Date::DATE_FORMATS.merge!({ :default => '%m-%d-%Y' })
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
